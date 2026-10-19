@@ -1,0 +1,130 @@
+
+/* Overall page */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* Create issue form */
+.issue-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: #1e293b;
+  padding: 24px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  margin-bottom: 32px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  color: #e2e8f0;
+  background: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+label {
+  align-self: center;
+  color: #cbd5e1;
+}
+
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+/* Issue cards */
+.issues-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.issue-card {
+  background: #1e293b;
+  padding: 22px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+
+.issue-card select {
+  margin: 10px 0;
+}
+
+.delete-button {
+  width: 100%;
+  margin-top: 12px;
+  background: #dc2626;
+}
+
+.delete-button:hover {
+  background: #b91c1c;
+}
+
+.issue-id {
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* Smaller screens */
+@media (max-width: 650px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  .issue-form,
+  .issues-list {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
